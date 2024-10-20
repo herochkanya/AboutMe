@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="header_right">
-            <div class="header_btn">
+            <div class="header_btn" id="scrollButton">
                 <i class="fa-solid fa-chevron-down"></i>
             </div>
         </div>
@@ -29,13 +29,13 @@
             <h1>Skills</h1>
             <div class="section_row">
                 <div class="section_item">
-                    <img src="resourses/html_logo.png" alt="">
+                    <img src="resourses/html_logo.png" alt="HTML Logo">
                 </div>
                 <div class="section_item">
-                    <img src="resourses/css_logo.png" alt="">
+                    <img src="resourses/css_logo.png" alt="CSS Logo">
                 </div>
                 <div class="section_item">
-                    <img src="resourses/js_logo.png" alt="">
+                    <img src="resourses/js_logo.png" alt="JavaScript Logo">
                 </div>
             </div>
         </section>
@@ -43,7 +43,8 @@
             <h1>My projects</h1>
             <div class="section_row">
                 <div class="section_item github">
-                    <img src="resourses/github_logo.png" alt="">
+                    <a href="https://github.com/herochkanya" target="_blank">
+                        <img src="resourses/github_logo.png" alt="GitHub Logo">
                 </div>
             </div>
         </section>
@@ -51,13 +52,19 @@
             <h1>Contacts</h1>
             <div class="section_row">
                 <div class="section_item">
-                    <img src="resourses/Instagram_icon.png.webp" alt="">
+                    <a href="https://www.instagram.com/notmainhero/" target="_blank">
+                        <img src="resourses/Instagram_icon.png.webp" alt="Instagram Icon">
+                    </a>
                 </div>
                 <div class="section_item">
-                    <img src="resourses/tg_logo.svg" alt="">
+                    <a href="https://t.me/not_main_hero" target="_blank">
+                        <img src="resourses/tg_logo.svg" alt="Telegram Logo">
+                    </a>
                 </div>
                 <div class="section_item">
-                    <img src="resourses/email_logo.png" alt="">
+                    <a href="mailto:herofthisworld@gmail.com">
+                        <img src="resourses/email_logo.png" alt="Email Logo">
+                    </a>
                 </div>
             </div>
         </section>
@@ -67,5 +74,19 @@
            Created by me in 2024 | Logika
         </div>
     </footer>
+
+    <script>
+        document.getElementById('scrollButton').addEventListener('click', function() {
+            const nextSection = document.querySelector('main > section:nth-of-type(2)'); // Вибір наступного розділу (Projects).
+            if (nextSection) {
+                const targetPosition = nextSection.getBoundingClientRect().top + window.scrollY;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth' // Плавна прокрутка
+                });
+            }
+        });
+    </script>
 </body>
 </html>
