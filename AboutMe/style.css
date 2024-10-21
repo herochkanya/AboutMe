@@ -4,6 +4,21 @@ body {
     padding: 0;
 }
 
+body {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 header {
     width: 100%;
     height: 100vh;
@@ -32,7 +47,6 @@ header {
 .bio {
     width: 60%;
 }
-
 
 .header_right {
     width: 35%;
@@ -76,6 +90,7 @@ section h1 {
     align-items: center;
     justify-content: center;
 }
+
 .section_item {
     height: 10vw;
     margin: 0 4em 4em 4em;
@@ -84,7 +99,6 @@ section h1 {
 .section_item img {
     height: 100%;
 }
-
 
 .projects {
     color: white;
@@ -105,7 +119,6 @@ footer {
     background-position: center;
 }
 
-
 .footer_content {
     width: 100%;
     height: 100%;
@@ -115,4 +128,30 @@ footer {
     align-items: center;
     justify-content: center;
     color: white;
+}
+
+.header_btn, .github img, .section_item img {
+    transition: transform 0.3s ease;
+}
+
+.header_btn:hover, .github:hover img, .section_item:hover img {
+    transform: scale(1.1);
+}
+
+.header_btn:active, .github:active img, .section_item:active img {
+    transform: scale(0.9);
+}
+
+.my-cat {
+    background-color: rgba(173, 216, 230, 0.8); /* Light blue background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    margin: 20px auto; /* Centering the section */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cat-description p {
+    font-size: 1.2em;
+    color: #333; /* Dark text for better contrast */
 }
